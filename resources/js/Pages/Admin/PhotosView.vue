@@ -5,17 +5,14 @@
         </template>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <h1>Photo</h1>
-                <section class="photos">
-                    <div class="preview p-4">
-                            <img :src="'/storage/' + photo.path" alt />
-                            <br>
-                            <p>
-                                {{ photo.description }}
-                            </p>
-
+                <div class="grid grid-cols-2">
+                    <img :src="'/storage/' + photo.path" alt />
+                        <div class="mt-1 flex justify-left px-6 pt-5 pb-6 border-gray-300 border-solid rounded-md">    
+                                <p>
+                                    {{ photo.description }}
+                                </p>
                         </div>
-                </section>
+                </div>
             </div>
         </div>
     </app-layout>
