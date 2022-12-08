@@ -73,6 +73,14 @@
                                       </tr>
                                   </tbody>
                               </table>
+                              <DataTable :data="data" class="display" width="100%">
+                                <thead>
+                                    <tr>
+                                    <th>ID</th>
+                                    <th>PHOTO</th>
+                                    </tr>
+                                </thead>
+                                </DataTable>
                           </div>
                       </div>
                   </div>
@@ -105,8 +113,10 @@ import { Link } from '@inertiajs/inertia-vue3';
 import { useForm } from '@inertiajs/inertia-vue3';
 import JetDialogModal from '@/Components/DialogModal.vue';
 import JetDangerButton from '@/Components/DangerButton.vue'
-import JetPrimaryButton from '@/Components/PrimaryButton.vue'
 import { ref } from "vue";
+import DataTable from 'datatables.net-vue3';
+import DataTablesLib from 'datatables.net';
+DataTable.use(DataTablesLib);
 export default defineComponent({
     components: {
         AppLayout,
@@ -132,6 +142,11 @@ export default defineComponent({
             }
 
         })
+
+        const data2 = [
+            [1, 2],
+            [3, 4],
+            ];
 
 
         const delete_photo = (photo) => {

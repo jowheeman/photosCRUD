@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Photo;
 use Illuminate\Http\Request;
+use App\DataTables\UsersDataTable;
 
 class PhotoController extends Controller
 {
